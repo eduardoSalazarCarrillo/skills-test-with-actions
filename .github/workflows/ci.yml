@@ -35,8 +35,10 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
-      - name: Install remark-preset-lint-consistent
-        run: npm install remark-present-lint-consistent
+      - name: Set up Node.js
+        run: actions/setup-node@v2
+        with:
+          node-version: '14'
         
       - name: Run markdown lint
         run: |
